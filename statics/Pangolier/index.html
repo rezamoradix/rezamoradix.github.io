@@ -138,7 +138,9 @@
         if (v) new Audio(F).play();
 
         if (all) {
-            next = next == "A"
+          trigger(next);
+          next =
+            next == "A"
               ? "S"
               : next == "S"
               ? "D"
@@ -147,7 +149,6 @@
               : next == "F"
               ? "A"
               : "A";
-          trigger(next);
         }
       }, 900);
 
@@ -193,6 +194,7 @@
             v = !v;
             document.querySelector("#v").classList = v ? "active" : "";
             break;
+          case " ":
           case "ALL":
             all = !all;
             document.querySelector("#all").classList = all ? "active" : "";
